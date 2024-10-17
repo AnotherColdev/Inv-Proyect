@@ -11,8 +11,6 @@ datasource db {
   url       = env("DATABASE_URL")
   directUrl = env("DIRECT_URL")
 }
-        
-
 
 model Sede {
   id Int @id @default(autoincrement())
@@ -30,7 +28,7 @@ model Sede {
 model Empleado {
   cedula Int @id @unique
   nombre String
-  celular String
+  celular String?
   contrasena String
   rol String
   sede Sede @relation(fields: [idSede], references: [id])

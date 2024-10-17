@@ -1,0 +1,139 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #EDF2EB;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 50px;
+}
+
+.usuario-menu {
+    position: relative;
+}
+
+.usuario-menu span {
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.menu {
+    display: inline-block;
+    position: relative;
+}
+
+.menu-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.menu-content a {
+    display: block;
+    padding: 8px 12px;
+    color: black;
+    text-decoration: none;
+}
+
+.menu-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.menu:hover .menu-content {
+    display: block;
+}
+
+/* Main con fondo y botones centrados */
+/* Main con fondo y botones centrados */
+main {
+    background-image: url(../Imagenes/fondoProvisional.jpg); /* Coloca aquí tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 120px); /* Altura restando el header y footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor del div central más grande */
+.botones-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 50px; /* Aumenta el padding para que el div sea más grande */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 400px; /* Ajusta el ancho según prefieras */
+}
+
+/* Estilos para asegurar que los botones tengan el mismo tamaño */
+.botones-container button {
+    display: block;
+    margin: 15px auto; /* Auto para mantener los botones centrados */
+    padding: 15px 0;
+    width: 100%; /* Los botones ocuparán el 100% del ancho disponible */
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.botones-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Opcional para asegurar que todos los botones tengan el mismo alto */
+.botones-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch; /* Asegura que los botones se estiren por igual */
+}
+
+/* Footer */
+footer {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    text-align: right;
+    background-color: #EDF2EB;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+footer img {
+    height: 40px;
+    vertical-align: middle;
+}
