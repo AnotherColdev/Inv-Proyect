@@ -1,0 +1,86 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.main {
+    background-color: white; /* Añadir fondo blanco */
+    padding: 20px; /* Añadir algo de padding para separar el contenido del borde */
+    margin: 20px auto; /* Centrar el contenedor */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Añadir una sombra para destacar el contenedor */
+    border-radius: 8px; /* Añadir bordes redondeados */
+    width: 80%; /* Ajustar el ancho */
+}
+
+table {
+    width: 100%; /* Cambiar a 100% para que ocupe el ancho del div contenedor */
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #007bff;
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+td a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+td form {
+    display: inline;
+}
+
+td form button {
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+td form button:hover {
+    background-color: #cc0000;
+}
+
+a {
+    display: block;
+    width: 150px;
+    margin: 20px auto;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #0056b3;
+}
