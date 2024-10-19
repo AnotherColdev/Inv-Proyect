@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
   res.render('login');  // Renderiza la vista del login al visitar "/"
 });
 
-router.post('/login', authController.login);
+router.post('/Login', authController.login);
 router.get('/logout', authController.logout);
 
 module.exports = router;

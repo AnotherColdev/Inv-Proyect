@@ -4,10 +4,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;  /* Centramos horizontalmente */
-    align-items: center;      /* Centramos verticalmente */
-    height: 100vh;            /* Aseguramos que el body ocupe toda la altura de la ventana */
 }
 
 h1 {
