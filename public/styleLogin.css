@@ -93,3 +93,9 @@ input[type="submit"]:hover {
     border-color: purple;
     transition: .5s;
 }
+
+.username input:focus ~ label,
+.username input:valid ~ label {
+    top: 5px;
+    color: #6c3483;
+}
