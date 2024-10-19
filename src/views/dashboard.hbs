@@ -1,17 +1,19 @@
-<h1>Bienvenido, {{user.name}}</h1>
+<!-- Main con imagen de fondo y botones -->
+    <main>
+        <div class="botones-container">
+            <h1>Bienvenido, {{user.name}}</h1>
+            <h2>Gestión de Inventario</h2>
+            <ul>
+                <li><button onclick="location.href='/users'">Gestionar Usuarios</button></li>
+                <li><button onclick="location.href='#'">Gestionar Sedes Pendiente</button></li>
+                <li><button onclick="location.href='/products'">Consultar Inventario</button></li>
+                <li><button onclick="location.href='#'">Generar informes Pendiente</button></li>
+            </ul>
 
-<div>
-  <h2>Gestión de Inventario</h2>
-  <ul>
-    <li><a href="/users">Gestionar Usuarios</a></li>
-    <li><a href="/products">Gestionar Productos</a></li>
-  </ul>
-</div>
-
-<div>
-  <h2>Estadísticas rápidas</h2>
-  <p>Total de usuarios: {{userCount}}</p>
-  <p>Total de productos: {{productCount}}</p>
-</div>
-
-<a href="/logout">Cerrar sesión</a>
+            <div class="estadisticas-rapidas">
+                <h2>Estadísticas rápidas</h2>
+                <p>Total de usuarios: {{userCount}}</p>
+                <p>Total de productos: {{productCount}}</p>
+            </div>
+        </div>
+    </main>
