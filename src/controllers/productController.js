@@ -4,7 +4,7 @@ const prisma = require('../models/prismaClient');
 exports.getProducts = async (req, res) => {
   try {
     const products = await prisma.product.findMany();
-    res.render('products', { products, title: 'Productos' });
+    res.render('products', { products, title: 'Productos', showNavbar: true, });
   } catch (error) {
     console.error(error);
     res.status(500).send('Error al obtener productos');
@@ -13,7 +13,7 @@ exports.getProducts = async (req, res) => {
 
 // Mostrar el formulario para crear un nuevo producto
 exports.getCreateProductForm = (req, res) => {
-  res.render('productForm', { title: 'Crear Producto' });
+  res.render('productForm', { title: 'Crear Producto', showNavbar: true, });
 };
 
 // Crear un nuevo producto
@@ -41,7 +41,7 @@ exports.getEditProductForm = async (req, res) => {
   
   try {
     const product = await prisma.product.findUnique({ where: { id: parseInt(id) } });
-    res.render('productForm', { product, title: 'Editar Producto' });
+    res.render('productForm', { product, title: 'Editar Producto', showNavbar: true, });
   } catch (error) {
     console.error(error);
     res.status(500).send('Error al cargar el producto');

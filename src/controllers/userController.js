@@ -5,7 +5,7 @@ const bcrypt = require('bcryptjs');
 exports.getUsers = async (req, res) => {
   try {
     const users = await prisma.user.findMany();
-    res.render('users', { users, title: 'Usuarios' });
+    res.render('users', { users, title: 'Usuarios', showNavbar: true, });
   } catch (error) {
     console.error(error);
     res.status(500).send('Error al obtener usuarios');
@@ -14,7 +14,7 @@ exports.getUsers = async (req, res) => {
 
 // Mostrar el formulario para crear un nuevo usuario
 exports.getCreateUserForm = (req, res) => {
-  res.render('userForm', { title: 'Crear Usuario' });
+  res.render('userForm', { title: 'Crear Usuario', showNavbar: true, });
 };
 
 // Crear un nuevo usuario
@@ -44,7 +44,7 @@ exports.getEditUserForm = async (req, res) => {
   
   try {
     const user = await prisma.user.findUnique({ where: { id: parseInt(id) } });
-    res.render('userForm', { user, title: 'Editar Usuario' });
+    res.render('userForm', { user, title: 'Editar Usuario', showNavbar: true, });
   } catch (error) {
     console.error(error);
     res.status(500).send('Error al cargar el usuario');
