@@ -14,8 +14,10 @@ Handlebars.registerHelper('eq', function (a, b) {
 const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
 const productRoutes = require('./routes/productRoutes');
+const sedeRoutes = require('./routes/sedeRoutes')
 const dashboardRoutes = require('./routes/dashboardRoutes');
 const { isAuthenticated } = require('./middlewares/authMiddleware');
+const { isatty } = require('tty');
 
 const app = express();
 
@@ -31,6 +33,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use('/', authRoutes);
 app.use('/users', isAuthenticated, userRoutes);
 app.use('/products', isAuthenticated, productRoutes);
+app.use('/sedes', isAuthenticated, sedeRoutes)
 app.use('/', dashboardRoutes);
 
 const PORT = process.env.PORT || 3000;
