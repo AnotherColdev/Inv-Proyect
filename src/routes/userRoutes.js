@@ -18,4 +18,3 @@ router.post('/edit/:id', isAuthenticated, userController.editUser);        // Pr
 router.post('/delete/:id', isAuthenticated, userController.deleteUser);
 
 module.exports = router;
-

@@ -14,6 +14,7 @@ Handlebars.registerHelper('eq', function (a, b) {
 const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
 const productRoutes = require('./routes/productRoutes');
+const sedeRoutes = require('./routes/sedeRoutes');
 const dashboardRoutes = require('./routes/dashboardRoutes');
 const { isAuthenticated } = require('./middlewares/authMiddleware');
 
@@ -31,6 +32,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use('/', authRoutes);
 app.use('/users', isAuthenticated, userRoutes);
 app.use('/products', isAuthenticated, productRoutes);
+app.use('/sedes', isAuthenticated, sedeRoutes);
 app.use('/', dashboardRoutes);
 
 app.use(express.static(path.join(__dirname, '../public')));
@@ -39,5 +41,5 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log("Servidor corriendo en el puerto ${PORT}");
+  console.log("Servidor corriendo en el puerto ", PORT);
 });
