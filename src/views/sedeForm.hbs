@@ -1,6 +1,6 @@
 <h1>{{#if sede}}Editar Sede{{else}}Crear Sede{{/if}}</h1>
 
-<form action="{{#if sede}}/sede/edit/{{sede.id}}{{else}}/sede/new{{/if}}" method="POST">
+<form action="{{#if sede}}/sedes/edit/{{sede.id}}{{else}}/sedes/new{{/if}}" method="POST">
   <div>
     <label>Nombre</label>
     <input type="text" name="name" value="{{sede.name}}" required>
