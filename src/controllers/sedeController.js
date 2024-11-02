@@ -18,13 +18,13 @@ exports.getCreateSedeForm = (req, res) => {
 
 //Crear nueva sede
 exports.createSede = async (req, res) => {
-    const {nameSede, addressSede} = req.body;
+    const {name, address} = req.body;
 
     try {
         await prisma.sede.create({
             data: {
-                name: nameSede,
-                address: addressSede
+                name,
+                address
             }
         });
         res.redirect('/sedes');
