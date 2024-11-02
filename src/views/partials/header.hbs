@@ -1,0 +1,18 @@
+<header>
+  <div class="logo">
+    <img src="../layouts/Logo_Bar.png" alt="Logo Tienda">
+  </div>
+  
+  {{#if showUserMenu}}
+    <div class="usuario-menu">
+      <span>USUARIO: ADMINISTRADOR</span>
+      <div class="menu">
+        <button class="menu-btn">Menú ▼</button>
+        <div class="menu-content">
+          <a href="#">Modificar Datos</a>
+          <a href="#">Cerrar Sesión</a>
+        </div>
+      </div>
+    </div>
+  {{/if}}
+</header>

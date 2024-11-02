@@ -9,16 +9,17 @@
     <link rel="stylesheet" href="/css/dashboard.css">
     <link rel="stylesheet" href="/css/users.css">
     <link rel="stylesheet" href="/css/userform.css">
-
 </head>
 <body>
-
-    {{#if showNavbar}}
-        {{> navbar}}
+    {{#if isLogin}}
+        {{> headerLogin}} <!-- Incluye el header específico para el login -->
+    {{else}}
+        {{> header}} <!-- Incluye el header general para otras vistas -->
     {{/if}}
 
-    
-    {{{body}}}  <!-- Aquí se inyecta el contenido de cada vista -->
+    <div class="container"> <!-- Este contenedor debería estar aquí -->
+        {{{body}}} <!-- Aquí se inyecta el contenido de cada vista -->
+    </div>
 </body>
-</html>
 
+</html>

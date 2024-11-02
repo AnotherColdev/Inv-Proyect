@@ -17,6 +17,7 @@ model User {
   password  String
   role      String // Admin, User
   createdAt DateTime @default(now())
+  sede Sede[]
 }
 
 model Product {
@@ -34,4 +35,5 @@ model Sede {
   city String?
   createdAt DateTime @default(now())
   modifiedAt DateTime?
+  users User[]
 }

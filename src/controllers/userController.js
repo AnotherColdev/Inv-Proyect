@@ -19,7 +19,7 @@ exports.getCreateUserForm = (req, res) => {
 
 // Crear un nuevo usuario
 exports.createUser = async (req, res) => {
-  const { name, email, password, role } = req.body;
+  const { name, email, password, role, sede } = req.body;
   
   try {
     const hashedPassword = await bcrypt.hash(password, 10);
@@ -28,7 +28,8 @@ exports.createUser = async (req, res) => {
         name,
         email,
         password: hashedPassword,
-        role
+        role,
+        sede
       }
     });
     res.redirect('/users');
@@ -62,7 +63,8 @@ exports.editUser = async (req, res) => {
       data: {
         name,
         email,
-        role
+        role,
+        sede
       }
     });
     res.redirect('/users');
