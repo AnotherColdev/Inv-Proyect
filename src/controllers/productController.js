@@ -31,7 +31,7 @@ exports.createProduct = async (req, res) => {
     res.redirect('/products');
   } catch (error) {
     console.error(error);
-    res.status(500).send('Error al crear producto');
+    res.status(500).send(error);
   }
 };
 
