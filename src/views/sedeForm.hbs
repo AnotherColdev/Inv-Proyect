@@ -1,13 +1,24 @@
+<div class = "main">
 <h1>{{#if sede}}Editar Sede{{else}}Crear Sede{{/if}}</h1>
 
-<form action="{{#if sede}}/sede/edit/{{sede.id}}{{else}}/sede/new{{/if}}" method="POST">
+<form action="/sedes/new" method="POST">
   <div>
     <label>Nombre</label>
     <input type="text" name="name" value="{{sede.name}}" required>
   </div>
   <div>
     <label>Direccion</label>
-    <input type="text"  name="address" value="{{sede.address}}" required>
+    <input type="text" name="address" value="{{sede.address}}" required>
+  </div>
+  <div>
+    <label>Telefono</label>
+    <input type="number" name="telephone" value="{{sede.telephone}}" required>
+  </div>
+  <div>
+    <label>City</label>
+    <input type="text" name="city" value="{{sede.city}}" required>
   </div>
   <button type="submit">Guardar</button>
 </form>
+</div>
+

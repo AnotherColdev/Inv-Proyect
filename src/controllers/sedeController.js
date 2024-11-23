@@ -18,21 +18,24 @@ exports.getCreateSedeForm = (req, res) => {
 
 //Crear nueva sede
 exports.createSede = async (req, res) => {
-    const {name, address} = req.body;
-
+    const { name, address, telephone, city } = req.body; // Asegurar que los nombres coincidan
+  
     try {
-        await prisma.sede.create({
-            data: {
-                name,
-                address
-            }
-        });
-        res.redirect('/sedes');
+      await prisma.sede.create({
+        data: {
+          name,
+          address,
+          telephone, // Campo correcto del modelo Prisma
+          city       // Campo correcto del modelo Prisma
+        }
+      });
+      res.redirect('/sedes');
     } catch (error) {
-        console.error(error);
-        res.status(500).send('Error al crear la sede');
+      console.error('Error al crear la sede:', error);
+      res.status(500).send('Error al crear la sede');
     }
-};
+  };
+  
 
 // Mostrar el formulario para editar una sede
 exports.getEditSedeForm = async (req, res) => {

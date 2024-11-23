@@ -29,7 +29,7 @@ exports.createUser = async (req, res) => {
         email,
         password: hashedPassword,
         role,
-        sede
+        idSede: sede ? parseInt(sede) : null
       }
     });
     res.redirect('/users');
@@ -54,8 +54,8 @@ exports.getEditUserForm = async (req, res) => {
 
 // Actualizar un usuario existente
 exports.editUser = async (req, res) => {
-  const { id } = req.params;
-  const { name, email, role } = req.body;
+  const { id } = req.params; // id del usuario
+  const { name, email, role, sede } = req.body; // `sede` es el id de la Sede
 
   try {
     await prisma.user.update({
@@ -64,8 +64,8 @@ exports.editUser = async (req, res) => {
         name,
         email,
         role,
-        sede
-      }
+        idSede: sede ? parseInt(sede) : null, // Actualizar el id de la Sede
+      },
     });
     res.redirect('/users');
   } catch (error) {
@@ -73,6 +73,7 @@ exports.editUser = async (req, res) => {
     res.status(500).send('Error al actualizar usuario');
   }
 };
+
 
 // Eliminar un usuario
 exports.deleteUser = async (req, res) => {

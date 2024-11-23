@@ -11,10 +11,8 @@
     <link rel="stylesheet" href="/css/userform.css">
 </head>
 <body>
-    {{#if isLogin}}
-        {{> headerLogin}} <!-- Incluye el header específico para el login -->
-    {{else}}
-        {{> header}} <!-- Incluye el header general para otras vistas -->
+    {{#if user}}
+        {{> navbar}}  <!-- Muestra el navbar solo si el usuario está autenticado -->
     {{/if}}
 
     <div class="container"> <!-- Este contenedor debería estar aquí -->
