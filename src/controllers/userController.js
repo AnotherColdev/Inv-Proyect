@@ -29,7 +29,7 @@ exports.createUser = async (req, res) => {
         email,
         password: hashedPassword,
         role,
-        sede
+        sede: parseInt(sede)
       }
     });
     res.redirect('/users');

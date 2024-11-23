@@ -21,16 +21,15 @@
   </div>
   <div>
     <label for="sede">Sede</label>
-      <select id="sede" name="sede" required>
+      <select id="sede" name="idSede" required>
         <option value="" disabled selected>--Seleccionar--</option>
-        <option value="1">Sede 1ro Mayo</option>
-        <option value="2">Sede Chia</option>
-        <option value="3">Sede Galerías</option>
-        <option value="4">Sede Restrepo</option>
+        <option value="1" {{#eq user.idSede 1}}selected{{/eq}}>Sede 1ro Mayo</option>
+        <option value="2" {{#eq user.idSede 2}}selected{{/eq}}>Sede Chia</option>
+        <option value="3" {{#eq user.idSede 3}}selected{{/eq}}>Sede Galerías</option>
+        <option value="4" {{#eq user.idSede 4}}selected{{/eq}}>Sede Restrepo</option>
       </select>
   </div>
   <button type="submit">Guardar</button>
 </form>
-
 </div>
 
